@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Forge - AI-Powered Resume Builder</title>
+    <script>
+      // Prevent flash of unstyled content by applying theme before render
+      (function() {
+        try {
+          const theme = localStorage.getItem('theme') || 'system';
+          const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          const effectiveTheme = theme === 'system' ? systemTheme : theme;
+
+          if (effectiveTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
+          }
+        } catch (e) {
+          console.error('Theme initialization error:', e);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/resume-forge-web/assets/index-BdVNXJSM.js"></script>
+    <link rel="stylesheet" crossorigin href="/resume-forge-web/assets/index-Bruxt3m-.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
